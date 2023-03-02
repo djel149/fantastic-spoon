@@ -1,0 +1,20 @@
+@model HomeViewModel
+
+
+<partial name="_Carousel" />
+
+<div class="text-center">
+    <img src="" class="logo-mark mx-auto" />
+    <h1>Special spoons</h1>
+    <h5>Enjoy a weekly selection of our favorite spoons or discounts</h5>
+
+    <div class="spoon-of-the-week">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var spoons in Model.SpecialSpoons)
+            {
+                <partial name="_SpoonCard" model="spoon" />
+            }
+        </div>
+
+    </div>
+</div>
